@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Всё head осталось без изменений -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Молодая Гвардия - Эпопея Подвига</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Всё style осталось без изменений, кроме дополнения для видео */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto 0;
+        }
+        .carousel iframe {
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            transition: transform 0.5s, box-shadow 0.5s;
+            cursor: pointer;
+            scroll-snap-align: start;
+        }
+        .carousel iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255,0,0,0.8);
+        }
+        .carousel img, .carousel iframe + p {
+            /* Подписи для видео теперь тоже */
+            text-align: center;
+            font-size: 0.9em;
+            color: #ccc;
+            margin-top: 10px;
+        }
+        /* Всё остальное style осталось -->
+    </style>
+</head>
+<body>
+    <!-- Всё до carousel осталось -->
+    <main id="home">
+        <section class="hero-story">
+            <h2>Рассказ от лица Олега Кошевого</h2>
+            <div class="story-text">
+                Я — Олег Кошевой, комсомолец и подпольщик. В 1942 году, когда фашисты оккупировали нашу Украину, мы не сдались. Вместе с друзьями — Улей, Любка, Сергеем, Иваном и другими — мы создали "Молодую гвардию" в Краматорске. Наш город горел от бомб, но мы печатали листовки, взрывали склады с горючим, помогали пленным. Каждая ночь была боем: мы писали на стенах "Смерть немецким оккупантам!" и путем сбрасывали фашистов с поездов. Мы знали, что рискуем жизнью, но за Родину, за наших матерей и братьев — стоило бороться.<br>
+                Помню день, когда нас поймали... Но дух борьбы жив. Смерть фашизму!
+            </div>
+            <button class="speak-button" onclick="speakText()">Прослушать рассказ (звуковой синтез)</button>
+            
+            <div class="carousel">
+                <!-- Первое изображение осталось -->
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Young_Guard_movie_%281948%29_1.jpg" alt="Кадр из фильма Молодая Гвардия - Олег Кошевой">
+                    <p>Кадр из фильма Молодая Гвардия - Олег Кошевой</p>
+                    <p>Кадр из фильма: Олег Кошевой с друзьями (ч/б).</p>
+                </div>
+                <!-- Первое видео: Трейлер фильма (ч/б, атмосферный) -->
+                <div>
+                    <iframe src="https://www.youtube.com/embed/6xzQcWorIWY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Трейлер фильма "Молодая Гвардия" (1948 г.) — посмотрите атмосферный ввод в историю!</p>
+                </div>
+                <!-- Второе изображение -->
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Young_Guard_movie_%281948%29_2.jpg/256px-Young_Guard_movie_%281948%29_2.jpg" alt="Кадр из фильма Молодая Гвардия - Подпольная группа">
+                    <p>Кадр из фильма Молодая Гвардия - Подпольная группа</p>
+                    <p>Кадр из фильма: Группа подпольщиков (ч/б).</p>
+                </div>
+                <!-- Второе видео: Отрывок с боевыми сценами (ч/б) -->
+                <div>
+                    <iframe src="https://www.youtube.com/embed/Qk1JK1KzQtg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>Отрывок из фильма: Бой подпольщиков (ч/б) — почувствуйте напряжение!</p>
+                </div>
+                <!-- Дополнительное изображение -->
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Young_Guard_poster.jpg/256px-Young_Guard_poster.jpg" alt="Афиша фильма">
+                    <p>Афиша фильма "Молодая Гвардия" (ч/б).</p>
+                </div>
+                <!-- Третье изображение -->
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Young_Guard_Ulyana_Gromova.jpg/256px-Young_Guard_Ulyana_Gromova.jpg" alt="Кадр с Улей">
+                    <p>Кадр с Ульяной Громовой (Улей).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Всё остальное осталось -->
+</body>
+</html>
